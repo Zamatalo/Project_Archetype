@@ -10,11 +10,16 @@
     <distributionManagement>
         <repository>
             <id>github</id>
-            <name>GitHub OWNER Apache Maven Packages</name>
             <url>https://maven.pkg.github.com/Zamatalo/Project_Archetype</url>
         </repository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/Zamatalo/Project_Archetype</url>
+        </repository>
+    </repositories>
 
     <build>
         <extensions>
