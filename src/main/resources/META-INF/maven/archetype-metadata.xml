@@ -1,0 +1,115 @@
+<archetype-descriptor name="${artifactId}">
+    <requiredProperties>
+        <requiredProperty key="groupId">
+            <defaultValue>com.example</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="artifactId">
+            <defaultValue>my-app</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="version">
+            <defaultValue>1.0-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="java_version">
+            <defaultValue>23</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="vaadin_version">
+            <defaultValue>24.5.5</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="spring_version">
+            <defaultValue>3.3.5</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="postgresql_version">
+            <defaultValue>42.7.4</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="lombok_version">
+            <defaultValue>1.18.36</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="server_port">
+            <defaultValue>8080</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="spring_datasource_url">
+            <defaultValue>jdbc:postgresql://localhost:5432/postgres</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="spring_datasource_username">
+            <defaultValue>postgres</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="spring_datasource_password">
+            <defaultValue>postgres</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <modules>
+        <module id="${rootArtifactId}-Logic" dir="__rootArtifactId__-Logic" name="${rootArtifactId}-Logic">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8" filtered="true">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>application.properties</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8" filtered="true">
+                    <directory>src/test/resources</directory>
+                    <includes>
+                        <include>application.properties</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-Persistence" dir="__rootArtifactId__-Persistence"
+                name="${rootArtifactId}-Persistence">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-Shared" dir="__rootArtifactId__-Shared" name="${rootArtifactId}-Shared">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-UI" dir="__rootArtifactId__-UI" name="${rootArtifactId}-UI">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/test/java</directory>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/test/resources</directory>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
+</archetype-descriptor>
