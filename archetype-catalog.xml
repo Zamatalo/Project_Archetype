@@ -4,12 +4,6 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <archetypes>
     <archetype>
-      <groupId>my.groupId</groupId>
-      <artifactId>my-archetype-id</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <description>my-archetype-id</description>
-    </archetype>
-    <archetype>
       <groupId>com.example</groupId>
       <artifactId>hup-project-archetype</artifactId>
       <version>1.0-SNAPSHOT</version>
