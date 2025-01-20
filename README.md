@@ -145,6 +145,6 @@ Or alternatively, you can add archetype-catalog.xml as custom catalog via Intell
 <img src=".docs/beispiel.png" width="512" height="512"  alt=""/>
 
 ```plaintext
-https://raw.githubusercontent.com/Zamatalo/Project_Archetype/refs/heads/master/archetype-catalog.xml
+https://raw.githubusercontent.com/Zamatalo/Project_Archetype/refs/heads/master/src/main/resources/META-INF/maven/archetype-catalog.xml
 ```
 
