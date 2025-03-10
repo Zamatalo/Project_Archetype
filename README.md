@@ -119,18 +119,12 @@ The parent container for the entire project. It defines dependencies and build c
 
 ### 1. Clone the Repository
 
-To start using this template in your own project, add archetype-catalog.xml as custom catalog via IntelliJ:
 
-<img src=".docs/beispiel.png" width="512" height="512"  alt=""/>
-
-```plaintext
-https://raw.githubusercontent.com/Zamatalo/Project_Archetype/refs/heads/master/archetype-catalog.xml
-```
 
 Or clone and generate it in your project:
 ```bash 
-git clone https://github.com/username/archetype-template.git
-cd archetype-template
+git https://bitbucket.hup.de/scm/~vtu/spring-boot-template.git
+cd spring-boot-template
 ```
 
 ```bash 
@@ -140,10 +134,17 @@ mvn clean install
 ```bash
 mvn archetype:generate \
   -DarchetypeGroupId=com.example \
-  -DarchetypeArtifactId=archetype-template \
+  -DarchetypeArtifactId=hup-project-archetype \
   -DarchetypeVersion=1.0-SNAPSHOT \
   -DgroupId=com.myproject \
   -DartifactId=my-new-project \
   -Dversion=1.0.0-SNAPSHOT
+```
+Or alternatively, you can add archetype-catalog.xml as custom catalog via IntelliJ:
+
+<img src=".docs/beispiel.png" width="512" height="512"  alt=""/>
+
+```plaintext
+https://raw.githubusercontent.com/Zamatalo/Project_Archetype/refs/heads/master/src/main/resources/META-INF/maven/archetype-catalog.xml
 ```
 
