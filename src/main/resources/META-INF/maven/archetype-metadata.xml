@@ -1,4 +1,6 @@
-<archetype-descriptor name="${artifactId}">
+<archetype-descriptor xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+                      name="hup-project-archetype">
     <requiredProperties>
         <requiredProperty key="groupId">
             <defaultValue>com.example</defaultValue>
@@ -24,8 +26,20 @@
         <requiredProperty key="lombok_version">
             <defaultValue>1.18.36</defaultValue>
         </requiredProperty>
-        <requiredProperty key="server_port">
+        <requiredProperty key="jakarta_version">
+            <defaultValue>3.1.1</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="openfeign_version">
+            <defaultValue>4.1.4</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="server_port_backend">
+            <defaultValue>8081</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="server_port_frontend">
             <defaultValue>8080</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="server_address">
+            <defaultValue>localhost</defaultValue>
         </requiredProperty>
         <requiredProperty key="spring_datasource_url">
             <defaultValue>jdbc:postgresql://localhost:5432/postgres</defaultValue>
@@ -75,7 +89,6 @@
                 </fileSet>
                 <fileSet encoding="UTF-8">
                     <directory>src/test/resources</directory>
-
                 </fileSet>
             </fileSets>
         </module>
@@ -100,14 +113,20 @@
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/main/java</directory>
                 </fileSet>
-                <fileSet encoding="UTF-8">
+                <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/main/resources</directory>
+                    <includes>
+                        <include>application.properties</include>
+                    </includes>
                 </fileSet>
                 <fileSet filtered="true" packaged="true" encoding="UTF-8">
                     <directory>src/test/java</directory>
                 </fileSet>
                 <fileSet encoding="UTF-8">
                     <directory>src/test/resources</directory>
+                    <includes>
+                        <include>application.properties</include>
+                    </includes>
                 </fileSet>
             </fileSets>
         </module>

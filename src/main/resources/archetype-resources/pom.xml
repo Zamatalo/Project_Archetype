@@ -16,14 +16,18 @@
   </modules>
 
   <properties>
-    <java.version>${java_version}</java.version>
+    <java.version>${java.version}</java.version>
     <vaadin.version>${vaadin_version}</vaadin.version>
     <spring.version>${spring_version}</spring.version>
     <postgresql.version>${postgresql_version}</postgresql.version>
     <lombok.version>${lombok_version}</lombok.version>
+    <jakarta.version>${jakarta_version}</jakarta.version>
+    <openfeign.version>${openfeign_version}</openfeign.version>
+
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
   </properties>
+
 
 
   <dependencies>
