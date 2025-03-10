@@ -12,7 +12,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>${groupId</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-Shared</artifactId>
             <version>${version}</version>
         </dependency>
